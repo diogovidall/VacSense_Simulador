@@ -9,9 +9,8 @@
 
   <style>
     body {
-      background: linear-gradient(120deg, #7cb5db, #0e476a);
-      overflow: hidden;
-      padding: 20px;
+      background-color: #7cb5db;
+      padding: 120px;
     }
 
     p {
@@ -21,7 +20,7 @@
     }
 
     .input_class {
-      background-color: #c2c2c2;
+      background-color: #dee4e991;
       width: 20%;
       height: 30px;
       padding: 5px;
@@ -33,7 +32,7 @@
     }
 
     #button {
-      background-color: #c2c2c2;
+      background-color:#cde3f268 ;
     }
 
     input {
@@ -42,27 +41,41 @@
 
     #div_style {
       text-align: center;
-      margin: 100px 0;
     }
 
     .mensagemDiv {
-      color: aliceblue;
-      font-size: 12px bold;
       text-align: center;
       font-family: "Franklin Gothic Medium", Arial, sans-serif;
-      color: aliceblue;
+      color: rgb(25, 24, 24);
+      background: #b2e0ff;
+      padding: 15px;
+      border-radius: 20px;
+      
+    }
+
+    .logo {
+      margin: 0 auto;
+      width: 250px;
+     
+    }
+
+    .shadow_button {
+      -webkit-box-shadow: 6px 11px 0px -1px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 6px 11px 0px -1px rgba(0, 0, 0, 0.75);
+      box-shadow: 6px 11px 0px -1px rgba(0, 0, 0, 0.75);
     }
   </style>
 </head>
 
 <body>
   <div id="div_style">
-    <p>Calculadora Financeira</p>
+    <img src="./logo_vacsense.png" alt="Logo" class="logo"><br>
+    <br>
 
     <input type="number" placeholder="Perda De Vacinas" id="quantidade_vacinas" class="input_class" /><br />
     <input type="number" placeholder="Valor da Vacina" id="valor_vacina" class="input_class" /><br />
-    <button onclick="result()" id="button">Calcular Perdas</button>
-    <hr />
+    <button class= "shadow_button" onclick="result()" id="button">Calcular Perdas</button><br>
+    <br>
   </div>
   <div id="div_mensagem" class="mensagemDiv"></div>
 </body>
@@ -75,11 +88,11 @@
     var valorVacina = Number(valor_vacina.value);
     var gastosTotais = valorVacina * perdasDiarias;
     var gastosEmAno = gastosTotais * 365;
-    div_mensagem.innerHTML = `A empresa perdeu por ano o total de ${gastosEmAno} vacinas.<br>`;
+    div_mensagem.innerHTML = `A empresa perdeu por ano o total de <b>${gastosEmAno} vacinas.<b><br>`;
 
     //Com o Sistema
     var gastosComSistema = 0.15 * gastosEmAno;
     var valorPerdido = gastosEmAno - gastosComSistema;
-    div_mensagem.innerHTML += `O número de perdas de vacinas usando nosso sistema, irá reduzir para: ${valorPerdido}. A empresa terá uma economia de ${gastosComSistema} vacinas`;
+    div_mensagem.innerHTML += `O número de perdas de vacinas usando nosso sistema, irá reduzir para: <b>${valorPerdido}<b>. A empresa terá uma economia de <b>${gastosComSistema}<b> vacinas`;
   }
 </script>
