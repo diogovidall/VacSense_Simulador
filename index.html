@@ -10,7 +10,7 @@
   <style>
     body {
       background-color: #7cb5db;
-      padding: 120px;
+      padding: 10px;
     }
 
     p {
@@ -20,27 +20,21 @@
     }
 
     .input_class {
+      margin: 0 auto;
+      display: flex;
       background-color: #dee4e991;
       width: 20%;
       height: 30px;
-      padding: 5px;
       box-sizing: border-box;
-      display: flex;
       -webkit-box-shadow: 6px 11px 0px -1px rgba(0, 0, 0, 0.75);
       -moz-box-shadow: 6px 11px 0px -1px rgba(0, 0, 0, 0.75);
       box-shadow: 6px 11px 0px -1px rgba(0, 0, 0, 0.75);
     }
 
-    #button {
-      background-color:#cde3f268 ;
-    }
-
-    input {
-      margin: 0 auto;
-    }
-
     #div_style {
+      margin: 0;
       text-align: center;
+      padding: 50px;
     }
 
     .mensagemDiv {
@@ -50,49 +44,116 @@
       background: #b2e0ff;
       padding: 15px;
       border-radius: 20px;
-      
+
     }
+
 
     .logo {
       margin: 0 auto;
-      width: 250px;
-     
+      width: 200px;
+
     }
 
-    .shadow_button {
+    .button {
+      background-color: #cde3f268;
+      border-radius: 5px;
+      padding: 5px;
       -webkit-box-shadow: 6px 11px 0px -1px rgba(0, 0, 0, 0.75);
       -moz-box-shadow: 6px 11px 0px -1px rgba(0, 0, 0, 0.75);
       box-shadow: 6px 11px 0px -1px rgba(0, 0, 0, 0.75);
     }
+
+    .navbar {
+      width: 300px;
+      display: flex;
+      align-items: end;
+      justify-content: space-evenly;
+      list-style: none;
+      color: #3284bc;
+
+    }
+
+    .logo_empresa {
+      width: 150px;
+      height: 50px;
+      display: flex;
+      align-items: start;
+      justify-content: start;
+    }
+
+    .container {
+      background-color: #0c1e1f;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 3px solid #32b9cd;
+      padding: 5px;
+
+
+    }
+
+
+    .header .container {
+      justify-content: space-between;
+    }
   </style>
 </head>
 
-<body>
-  <div id="div_style">
-    <img src="./logo_vacsense.png" alt="Logo" class="logo"><br>
-    <br>
+<body class="body">
+  <div class="header">
+    <div class="container">
+      <img src="./assets/logo_monitor health.png" alt="" class="logo_empresa">
+      <ul class="navbar">
+        <li class="vacSense_header">VacSense</li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Email</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">Sobre Nós</a></li>
+      </ul>
+    </div>
+  </div>
 
-    <input type="number" placeholder="Perda De Vacinas" id="quantidade_vacinas" class="input_class" /><br />
-    <input type="number" placeholder="Valor da Vacina" id="valor_vacina" class="input_class" /><br />
-    <button class= "shadow_button" onclick="result()" id="button">Calcular Perdas</button><br>
+  <div id="div_style">
+    <img src="./assets/logo_vacsense.png" alt="Logo" class="logo"><br>
+    <br>
+    <select name="Nome da Vacina" id="nome_vacina" class="input_class">br
+
+      <option value="triplice_viral">Tríplice Viral</option>
+      <option value="bcg">BCG</option>
+      <option value="hepatite">Hepatite B</option>
+      <option value="febre_amarela">Febre Amarela</option>
+
+    </select>
+    <br><input type="number" placeholder="Total de Vacinas" id="quantidade_vacinas" class="input_class" /><br />
+    <input type="number" placeholder="Valor por Unidade" id="valor_vacina" class="input_class" /><br />
+    <button class="button" onclick="result()" id="button">Calcular Perdas</button><br>
     <br>
   </div>
-  <div id="div_mensagem" class="mensagemDiv"></div>
+  <div id="caixa" class="mensagemDiv"></div>
 </body>
 
 </html>
 <script>
   function result() {
-    //Sem o sistema
-    var perdasDiarias = Number(quantidade_vacinas.value) / 365;
+    var nomeVacina = nome_vacina.value;
+    var totalDeVacinas = Number(quantidade_vacinas.value);
     var valorVacina = Number(valor_vacina.value);
-    var gastosTotais = valorVacina * perdasDiarias;
-    var gastosEmAno = gastosTotais * 365;
-    div_mensagem.innerHTML = `A empresa perdeu por ano o total de <b>${gastosEmAno} vacinas.<b><br>`;
 
-    //Com o Sistema
-    var gastosComSistema = 0.15 * gastosEmAno;
-    var valorPerdido = gastosEmAno - gastosComSistema;
-    div_mensagem.innerHTML += `O número de perdas de vacinas usando nosso sistema, irá reduzir para: <b>${valorPerdido}<b>. A empresa terá uma economia de <b>${gastosComSistema}<b> vacinas`;
+    var perdasDeVacinas = 0.45 * totalDeVacinas;
+    var prejuizoTotal = perdasDeVacinas * valorVacina;
+
+    var vacinasPoupadas = perdasDeVacinas * 0.75;
+    var vacSenseValor = prejuizoTotal * 0.75;
+
+    caixa.innerHTML = `<b>Sem a VacSense:</b><br>
+   Vacinas Perdidas: <b>${perdasDeVacinas.toFixed(0)}</b><br>
+   Prejuízo p/ Mês: <b>${prejuizoTotal.toFixed(0)}</b><br>
+   Prejuízo p/ Ano: <b>${prejuizoTotal.toFixed(0) * 12}</b><br>
+   <br>`
+    caixa.innerHTML += `<b>Com a VacSense:</b><br>
+   Vacinas Poupadas: <b>${vacinasPoupadas.toFixed(0)}</b><br>
+   Economia p/ Mês: <b>${vacSenseValor.toFixed(0)}</b><br>
+   Economia p/ Ano: <b>${vacSenseValor.toFixed(0) * 12}</b>`
+
   }
 </script>
