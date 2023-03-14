@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VacSense</title>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
 
   <style>
     body {
@@ -31,7 +31,7 @@
       -webkit-box-shadow: 6px 11px 0px -1px rgba(0, 0, 0, 0.75);
       -moz-box-shadow: 6px 11px 0px -1px rgba(0, 0, 0, 0.75);
       box-shadow: 6px 11px 0px -1px rgba(0, 0, 0, 0.75);
-     
+
     }
 
     #div_style {
@@ -124,10 +124,10 @@
     <br>
     <select name="Nome da Vacina" id="nome_vacina" class="input_class">br
 
-      <option value="triplice_viral">Tríplice Viral</option>
-      <option value="bcg">BCG</option>
-      <option value="hepatite">Hepatite B</option>
-      <option value="febre_amarela">Febre Amarela</option>
+      <option value="Triplice Viral">Tríplice Viral</option>
+      <option value="BCG">BCG</option>
+      <option value="Hepatite B">Hepatite B</option>
+      <option value="Febre Amarela">Febre Amarela</option>
 
     </select>
     <br><input type="number" placeholder="Total de Vacinas" id="quantidade_vacinas" class="input_class" /><br />
@@ -152,11 +152,13 @@
     var vacSenseValor = prejuizoTotal * 0.75;
 
     caixa.innerHTML = `<b>Sem a VacSense:</b><br>
+  Vacina Escolhida: <b>${nomeVacina}</b><br>
    Vacinas Perdidas: <b>${perdasDeVacinas.toFixed(0)}</b><br>
    Prejuízo p/ Mês: <b>${prejuizoTotal.toFixed(0)}</b><br>
    Prejuízo p/ Ano: <b>${prejuizoTotal.toFixed(0) * 12}</b><br>
    <br>`
     caixa.innerHTML += `<b>Com a VacSense:</b><br>
+  Vacina Escolhida: <b>${nomeVacina}</b><br>
    Vacinas Poupadas: <b>${vacinasPoupadas.toFixed(0)}</b><br>
    Economia p/ Mês: <b>${vacSenseValor.toFixed(0)}</b><br>
    Economia p/ Ano: <b>${vacSenseValor.toFixed(0) * 12}</b>`
