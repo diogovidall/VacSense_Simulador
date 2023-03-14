@@ -1,0 +1,119 @@
+  :root {
+    --color-white: #fff;
+    --color-dark1: #272727;
+    --color-dark2: #2d2d2d;
+    --color-dark3: #414141;
+    --color-dark4: #1c1c1c;
+    --color-dark5: #343434;
+    --color-blue: #b2e0ff;
+  }
+  
+  body {
+      background-color: #7cb5db;
+      padding: 10px;
+    }
+
+    p {
+      font-family: "Oswald", sans-serif;
+      font-size: 30px;
+      color: #badaef;
+    }
+
+    .input_class {
+      font-family: "Oswald", sans-serif;
+      margin: 0 auto;
+      display: flex;
+      background-color: #dee4e991;
+      width: 20%;
+      height: 30px;
+      box-sizing: border-box;
+      -webkit-box-shadow: 6px 11px 0px -1px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 6px 11px 0px -1px rgba(0, 0, 0, 0.75);
+      box-shadow: 6px 11px 0px -1px rgba(0, 0, 0, 0.75);
+
+    }
+
+    #div_style {
+      margin: 0;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .mensagemDiv {
+      text-align: center;
+      font-family: "Franklin Gothic Medium", Arial, sans-serif;
+      color: rgb(25, 24, 24);
+      background: #b2e0ff;
+      padding: 15px;
+      border-radius: 20px;
+      font-family: 'Oswald';
+
+    }
+
+
+    .logo {
+      margin: 0 auto;
+      width: 200px;
+      transition: 5s;
+
+    }
+
+    .button {
+      font-family: "Oswald", sans-serif;
+      background-color: #cde3f268;
+      border-radius: 5px;
+      padding: 5px;
+      -webkit-box-shadow: 6px 11px 0px -1px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 6px 11px 0px -1px rgba(0, 0, 0, 0.75);
+      box-shadow: 6px 11px 0px -1px rgba(0, 0, 0, 0.75);
+    }
+
+    .navbar {
+      font-family: "Osawald", sans-serif;
+      list-style: none;
+      color: #1e9e9e;
+      gap: 3em;
+      transition: 5s;
+      
+
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: var(--color-blue);
+        transition: 5s;
+    }
+
+    .active {
+        background-color: var(--color-dark3);
+        padding: 2px;
+        border-radius: 10px;
+        transition: 5s;
+    }
+
+    .logo_empresa {
+      width: 150px;
+      height: 50px;
+      display: flex;
+      align-items: start;
+      justify-content: start;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background-color: var(--color-dark2);
+      box-shadow: 1px 1px 4px var(--color-dark4);
+      height: 3.5em;
+      justify-content: space-between;
+      padding: 0 10%;
+
+    }
+
+
+    .header .navbar {
+      justify-content: space-between;
+      display: flex;
+      
+    } 
