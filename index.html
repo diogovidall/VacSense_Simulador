@@ -40,11 +40,32 @@
     <button class="button" onclick="result()" id="button">Calcular Perdas</button><br>
     <br>
   </div>
-  <div id="caixa" class="mensagemDiv"></div>
+  <div id="caixas" class="caixas">
+    <div id="caixa1" class="mensagemDiv"></div>
+    <div id="caixa2" class="mensagemDiv2"></div>
+  </div>
 </body>
 
 </html>
 <script>
+  var mostrarResultado = document.querySelector('#button');
+  var divCaixa1 = document.querySelector('#caixa1');
+  var divCaixa2 = document.querySelector('#caixa2');
+
+mostrarResultado.addEventListener('click', function() {
+if (caixa1.style.display === 'block') {
+caixa1.style.display = 'none';
+} else {
+  caixa1.style.display = 'block';
+}
+if (caixa2.style.display === 'block') {
+  caixa2.style.display = 'none';
+  } else {
+    caixa2.style.display = 'block';
+  }
+});
+
+
   function result() {
     var nomeVacina = nome_vacina.value;
     var totalDeVacinas = Number(quantidade_vacinas.value);
@@ -56,13 +77,13 @@
     var vacinasPoupadas = perdasDeVacinas * 0.75;
     var vacSenseValor = prejuizoTotal * 0.75;
 
-    caixa.innerHTML = `<b>Sem a VacSense:</b><br>
+    caixa1.innerHTML = `<b>Sem a VacSense:</b><br
   Vacina Escolhida: <b>${nomeVacina}</b><br>
    Vacinas Perdidas: <b>${perdasDeVacinas.toFixed(0)}</b><br>
    Prejuízo p/ Mês: <b>${prejuizoTotal.toFixed(0)}</b><br>
    Prejuízo p/ Ano: <b>${prejuizoTotal.toFixed(0) * 12}</b><br>
    <br>`
-    caixa.innerHTML += `<b>Com a VacSense:</b><br>
+    caixa2.innerHTML = `<b>Com a VacSense:</b><br>
   Vacina Escolhida: <b>${nomeVacina}</b><br>
    Vacinas Poupadas: <b>${vacinasPoupadas.toFixed(0)}</b><br>
    Economia p/ Mês: <b>${vacSenseValor.toFixed(0)}</b><br>
