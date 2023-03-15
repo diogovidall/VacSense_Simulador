@@ -13,6 +13,7 @@ body {
   padding: 10px;
   transition: 2s;
 }
+
 .input_class {
   font-family: "Oswald", sans-serif;
   margin: 0 auto;
@@ -25,7 +26,17 @@ body {
   -moz-box-shadow: 6px 11px 0px -1px rgba(0, 0, 0, 0.75);
   box-shadow: 6px 11px 0px -1px rgba(0, 0, 0, 0.75);
   transition: 3s;
-  
+
+}
+
+.button {
+  font-family: "Oswald", sans-serif;
+  background-color: #cde3f268;
+  border-radius: 5px;
+  padding: 5px;
+  -webkit-box-shadow: 6px 11px 0px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 6px 11px 0px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 6px 11px 0px -1px rgba(0, 0, 0, 0.75);
 }
 
 #div_style {
@@ -36,92 +47,85 @@ body {
 
 .mensagemDiv {
   display: hidden;
-      width: 100%;
-      height: 100%;
-      margin-left: 25%;
-      color: var(--color-dark4);
-      background: #b2e0ff;
-      padding: 10px;
-      border-radius: 10px;
-      font-family: 'Oswald';
-    }
-    .mensagemDiv2 {
-      display: hidden;
-      width: 100%;
-      height: 100%;
-      margin-right: 25%;
-      color: rgb(25, 24, 24);
-      background: #b2e0ff;
-      padding: 20px;
-      border-radius: 10px;
-      font-family: 'Oswald';
-    }
-    .caixas {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-    }
-    .logo {
-      margin: 0 auto;
-      width: 200px;
-      transition: 5s;
-    }
-    
-    
-    .logo_empresa {
-      width: 150px;
-      height: 50px;
-      display: flex;
-      align-items: start;
-      justify-content: start;
-    }
-    .button {
-      font-family: "Oswald", sans-serif;
-      background-color: #cde3f268;
-      border-radius: 5px;
-      padding: 5px;
-      -webkit-box-shadow: 6px 11px 0px -1px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 6px 11px 0px -1px rgba(0, 0, 0, 0.75);
-      box-shadow: 6px 11px 0px -1px rgba(0, 0, 0, 0.75);
-    }
+  width: 100%;
+  height: 100%;
+  margin-left: 25%;
+  color: var(--color-dark4);
+  background: #b2e0ff;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: 'Oswald';
+}
 
-    .navbar {
-      font-family: "Osawald", sans-serif;
-      list-style: none;
-      color: #1e9e9e;
-      gap: 3em;
-      transition: 5s;
-    }
+.mensagemDiv2 {
+  display: hidden;
+  width: 100%;
+  height: 100%;
+  margin-right: 25%;
+  color: rgb(25, 24, 24);
+  background: #b2e0ff;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: 'Oswald';
+}
 
-    .navbar a {
-        text-decoration: none;
-        color: var(--color-blue);
-        transition: 5s;
-    }
+.caixas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    .active {
-        background-color: var(--color-dark3);
-        padding: 2px;
-        border-radius: 10px;
-        transition: 5s;
-    }
+.logo {
+  margin: 0 auto;
+  width: 200px;
+  transition: 5s;
+}
+
+.logo_empresa {
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}
+
+.navbar {
+  font-family: "Osawald", sans-serif;
+  list-style: none;
+  color: #1e9e9e;
+  gap: 3em;
+  transition: 5s;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--color-blue);
+  transition: 5s;
+}
+
+.active {
+  background-color: var(--color-dark3);
+  padding: 2px;
+  border-radius: 10px;
+  transition: 5s;
+}
 
 
-    .container {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      background-color: var(--color-dark2);
-      box-shadow: 1px 1px 4px var(--color-dark4);
-      height: 3.5em;
-      justify-content: space-between;
-      padding: 0 10%;
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--color-dark2);
+  box-shadow: 1px 1px 4px var(--color-dark4);
+  height: 3.5em;
+  justify-content: space-between;
+  padding: 0 10%;
 
-    }
+}
 
 
-    .header .navbar {
-      justify-content: space-between;
-      display: flex;
-      
-    } 
+.header .navbar {
+  justify-content: space-between;
+  display: flex;
+
+}
