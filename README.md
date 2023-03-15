@@ -1,11 +1,16 @@
 <h1 align="center">💲Simulador Financeiro VacSense💲</h1>
 
-# Resumo do projeto:
-<h1 align= "center">Mostrar economia de vacinas utilizando um monitor de temperatura💉</h1> 
+<h1 align= "center">Sistema criado para evitar as perdas de vacinas!💉</h1> 
 
 # O intuito do projeto é reduzir o número de vacinas perdidas devido à temperatura inadequadada através de um controle IOT🤖
 
-![VacSense](https://user-images.githubusercontent.com/111745761/225106295-a729e371-25b2-4c1d-809d-abbd189c0805.png)
+<h1>Tela Inicial</h1>
+
+![VacSense](https://user-images.githubusercontent.com/111745761/225196161-3ccbaeac-c9e1-44a7-a85e-72f6a0442f9e.png)
+
+<h1>Sistema em Prática</h1>
+
+![result_VacSense](https://user-images.githubusercontent.com/111745761/225196230-91eab6f5-f07d-4a2a-9cc6-eafbd0eaa290.png)
 
 ## ✔️ Técnicas e tecnologias utilizadas
 
